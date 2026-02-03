@@ -5,7 +5,7 @@ import { getPlacesData } from "./api";
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import Map from "./components/Map/Map";
-import PlaceDetails from "./components/PlaceDetails/PlaceDetails";
+
 
 const App = () => {
   const [places, setPlaces] = useState([]);
@@ -29,7 +29,7 @@ const App = () => {
   useEffect(()=>{
     const filteredPlaces = places.filter((place)=> place.rating > rating);
     setFilteredPlaces(filteredPlaces);
-  }, [rating,places])
+  }, [rating, places])
 
 
 
